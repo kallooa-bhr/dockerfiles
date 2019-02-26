@@ -46,5 +46,6 @@ RUN apt-get install -y jupyter
 # Use the command python-jl, because finding the julia install is hard
 CMD ["python-jl", "app.py"]
 
-#jupyter notebook --ip 0.0.0.0 --port 8888 --no-browser --allow-root
+#jupyter notebook --ip 0.0.0.0 --port 8081 --no-browser --allow-root  #port 8081 or whatever set up with docker run command
+#remember to use token for jupyter in browser
 
