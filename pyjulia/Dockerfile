@@ -34,8 +34,7 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
     julia -e 'import Pkg; Pkg.add("PyCall")'
 
 # Install PyJulia
-RUN python3 -m pip install julia && \
-    python-jl --versiona
+RUN pip3 install julia
     
 RUN pip3 install pandas_redshift
 
