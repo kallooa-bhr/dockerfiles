@@ -35,7 +35,11 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
 
 # Install PyJulia
 RUN python3 -m pip install julia && \
-    python-jl --version
+    python-jl --versiona
+    
+RUN python3 -m pip install pandas_redshift && \
+    python3 -m pip install pandas && \
+    python3 -m pip install numpy
 
 # Use the command python-jl, because finding the julia install is hard
 CMD ["python-jl", "app.py"]
