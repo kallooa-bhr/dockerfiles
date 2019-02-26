@@ -39,5 +39,7 @@ RUN python3 -m pip install julia && \
     
 RUN pip3 install pandas_redshift
 
+RUN apt-get install -y jupyter
+
 # Use the command python-jl, because finding the julia install is hard
 CMD ["python-jl", "app.py"]
