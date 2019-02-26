@@ -33,9 +33,12 @@ RUN ln -fs /opt/julia-*/bin/julia /usr/local/bin/julia
 RUN julia -e 'import Pkg; Pkg.update()' && \
     julia -e 'import Pkg; Pkg.add("PyCall")'
 
+RUN julia -e 'import Pkg; Pkg.update; Pkg.add("Pandas")'
+RUN julia -e 'import Pkg; Pkg.update; Pkg.add("IJulia")'
+
 # Install PyJulia
 RUN pip3 install julia
-    
+RUN pip3 install setuptools
 RUN pip3 install pandas_redshift
 
 RUN apt-get install -y jupyter
