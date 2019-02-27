@@ -42,6 +42,7 @@ RUN julia -e 'import Pkg; Pkg.update; Pkg.add("CSV")'
 RUN julia -e 'import Pkg; Pkg.update; Pkg.add("DataFramesMeta")'
 RUN julia -e 'import Pkg; Pkg.update; Pkg.add("AcceleratedArrays")'
 RUN julia -e 'import Pkg; Pkg.update; Pkg.add("BenchmarkTools")'
+RUN julia -e 'import Pkg; Pkg.update; Pkg.add("ShiftedArrays")'
 
 # Install PyJulia
 RUN pip3 install julia
