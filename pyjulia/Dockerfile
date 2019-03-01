@@ -52,6 +52,7 @@ RUN pip3 install cython
 RUN pip3 install numba
 
 RUN apt-get install -y jupyter
+RUN apt-get insatll -y gcc
 
 # Use the command python-jl, because finding the julia install is hard
 CMD ["python-jl", "app.py"]
