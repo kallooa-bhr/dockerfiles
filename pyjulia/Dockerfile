@@ -48,6 +48,8 @@ RUN julia -e 'import Pkg; Pkg.update; Pkg.add("ShiftedArrays")'
 RUN pip3 install julia
 RUN pip3 install setuptools
 RUN pip3 install pandas_redshift
+RUN pip3 install cython
+RUN pip3 install numba
 
 RUN apt-get install -y jupyter
 
